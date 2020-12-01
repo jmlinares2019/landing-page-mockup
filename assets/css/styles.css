@@ -1,16 +1,213 @@
-section, div, nav, header{
+/*section, div, nav, header, a{
     border: 1px solid brown;
+}*/
+
+/* 
+
+Colors: 
+-------
+red: #e10500
+black: #222331
+text: #545567
+input-grey: #e3e4e6
+
+Font sizes (1rem: 16px)
+----------
+
+Title: 2.5rem
+Avant-title: 1.2rem (bold)
+Paragraph: 0.8rem
+Prices: 3rem (black)
+
+*/
+
+/*---- General styles ----- */
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    color: #545567;
+}
+
+a{
+    color: inherit;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #e10500;
+}
+
+.title{
+    font-size: 2.5rem;
+}
+
+.paragraph-text{
+    font-size: .8rem;
+}
+
+.pre-title{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.plan-price{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.btn{
+    font-size: .8rem;
+    border-radius: 0;
+}
+
+.btn.buy{
+    width: 100%;
+}
+
+.btn-danger{
+    background-color: #e10500 !important;
+}
+
+.btn-danger,
+.light-btn{
+    padding: 1rem 1.2rem;
+}
+
+.btn-danger:hover{
+    background-color: white !important;
+    color: #e10500;
+}
+
+.light-btn:hover{
+    background-color: #e3e4e6;
+}
+
+
+
+/*------- end general styles ----*/
+
+.top-menu,
+.navbar{
+    background-color: #222331 !important;
+}
+
+.navbar-brand{
+    position: relative;
+    padding-left: 20px;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: white !important;
+}
+
+.nav-item{
+    margin: 0 20px
+}
+
+.nav-link{
+    color: white !important;
+}
+
+.navbar-brand::before{
+    position: absolute;
+    left: -35px;
+    content: url(../img/logo.png);
+    display: inline;
 }
 
 .hero{
     height: 490px;
-    background-image: url(../img/banner-img.jpg);
+    background-image: url(../img/banner-img-op.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+.light-btn{
+    border: 1px solid #545567;
+}
+
+
+.plans{
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.list-group{
+    padding-left: 60px;
+}
+
+.plans li::before{
+    content: url(../img/check.svg);
+    position: absolute;
+    left: -10px;
+}
+
+.card{
+    min-height: 385px;
+    max-width: 290px;
+}
+
+.read-more{
+    position: relative;
+    padding-top: 20px;
+}
+
+.read-more::after{
+    content: url(../img/slider-arrow.png);
+    position: absolute;
+    top: 15px;
+    transform: scale(.5) rotate(180deg);
+}
+
 .cta-banner{
     background-color: #222331;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.cta-banner .btn{
+    width: 10rem;
+}
+
+.cta-banner p:not(.pre-title){
+    line-height: 1.3rem:
+}
+
+.subscribe-form{
+    padding-top: 70px;
+    padding-bottom: 70px
+}
+
+.form-title{
+    padding-bottom: 25px;
+}
+
+.form-group,
+.custom-checkbox{
+    margin-bottom: 20px;
+}
+
+input{
+    background-color: #e3e4e6 !important;
+    border-radius: 0 !important;
+}
+
+input::placeholder,
+label{
+    font-size: .8rem;
+}
+
+.input-pair{
+    flex-basis: 50%;
+}
+
+.form-btn{
+    width: 100%;
+    background-color: #545567;
     color: white;
 }
 
