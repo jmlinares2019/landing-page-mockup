@@ -1,0 +1,26 @@
+section, div, nav, header{
+    border: 1px solid brown;
+}
+
+.hero{
+    height: 490px;
+    background-image: url(../img/banner-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cta-banner{
+    background-color: #222331;
+    color: white;
+}
+
+
+/* ------ Responsive ---------- */
+
+@media only screen and (min-width: 1200px){
+    
+    .container{
+        max-width: 1500px !important;
+    }
+    
+}
