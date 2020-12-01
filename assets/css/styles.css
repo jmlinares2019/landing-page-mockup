@@ -1,30 +1,8 @@
-/*section, div, nav, header, a{
-    border: 1px solid brown;
-}*/
-
-/* 
-
-Colors: 
--------
-red: #e10500
-black: #222331
-text: #545567
-input-grey: #e3e4e6
-
-Font sizes (1rem: 16px)
-----------
-
-Title: 2.5rem
-Avant-title: 1.2rem (bold)
-Paragraph: 0.8rem
-Prices: 3rem (black)
-
-*/
-
 /*---- General styles ----- */
 
 *{
     box-sizing: border-box;
+    margin-block-end: 0;
 }
 
 body{
@@ -52,6 +30,7 @@ a:hover{
 .pre-title{
     font-size: 1.3rem;
     font-weight: 700;
+    margin-bottom: 0;
 }
 
 .plan-price{
@@ -104,7 +83,7 @@ a:hover{
 }
 
 .nav-item{
-    margin: 0 20px
+    margin: 0 20px;
 }
 
 .nav-link{
@@ -118,11 +97,16 @@ a:hover{
     display: inline;
 }
 
+.navbar-light .navbar-toggler-icon{
+    background-image: url(../img/menu-toggler.svg);
+}
+
 .hero{
     height: 490px;
     background-image: url(../img/banner-img-op.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: right;
 }
 
 .light-btn{
@@ -131,12 +115,14 @@ a:hover{
 
 
 .plans{
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-.list-group{
-    padding-left: 60px;
+.list-group,
+.list-group-flush,
+.list-group-item{
+    border: none !important;
 }
 
 .plans li::before{
@@ -147,19 +133,30 @@ a:hover{
 
 .card{
     min-height: 385px;
-    max-width: 290px;
 }
+
+.card-body{
+        max-height: 130px;
+    }
 
 .read-more{
     position: relative;
     padding-top: 20px;
 }
 
-.read-more::after{
+.read-more::after,
+.arrow-more::after{
     content: url(../img/slider-arrow.png);
     position: absolute;
-    top: 15px;
     transform: scale(.5) rotate(180deg);
+}
+
+.read-more::after{
+    top: 15px;
+}
+
+.arrow-more::after{
+    top: -5px;
 }
 
 .cta-banner{
@@ -202,7 +199,7 @@ label{
 }
 
 .input-pair{
-    flex-basis: 50%;
+    flex-basis: 48%;
 }
 
 .form-btn{
@@ -212,12 +209,146 @@ label{
 }
 
 
-/* ------ Responsive ---------- */
+/* ------------ Responsive ------------- */
 
-@media only screen and (min-width: 1200px){
+/*---------- Mobile only ------ */
+
+@media (max-width: 575.98px){
+    
+    .hero{
+        min-height: 695px;
+        background-image: url(../img/banner-img-MOBILE.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+    }
+    
+    .hero-text{
+        margin-top: 50px;
+    }
+    
+    .hero-buttons{
+        margin-top: 250px;
+    }
+    
+    .hero-buttons .btn,
+    .cta-banner .btn{
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    
+    .cta-banner .paragraph{
+        margin-top: 100px;
+    }
+    
+}
+
+/*------ Mobile and Tablet portrait ----- */
+
+@media (max-width: 767.98px){
+    
+    .card{
+        margin-top: 20px;
+    }
+    
+    .list-group{
+        padding-left: 60px;
+    }
+}
+
+/* ----------- Tablet portrait ------------ */
+
+@media (min-width: 576px) and (max-width: 767.98){
+    
+}
+
+/*-------- Tablet portrait to tablet landscape ----- */
+
+@media (min-width: 768px) and (max-width: 991.98px){
+    
+    .title{
+        font-size: 2.3rem;
+    }
+
+    .paragraph-text{
+        font-size: .8rem;
+    }
+
+    .pre-title{
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+
+    .plan-price{
+        font-size: 2.7rem;
+        font-weight: 900;
+    }
+
+    .btn{
+        font-size: .8rem;
+        border-radius: 0;
+    }
+    
+    .list-group{
+        min-height: 195px;
+    }
+    
+}
+
+
+@media (min-width: 768px) and (max-width: 1199.98px){
+    
+    .list-group{
+        padding-left: 40px;
+    }
+}
+
+/* ------- From Tablet landscape / Small Desktop up -------- */ 
+
+@media (min-width: 992px){
+    
+    .card{
+        max-width: 290px;
+    }
+    
+}
+
+/*----------- From Small Desktop up -------------*/
+
+@media (min-width: 1200px){
     
     .container{
         max-width: 1500px !important;
     }
     
+    .title{
+    font-size: 2.5rem;
 }
+
+    .paragraph-text{
+        font-size: .8rem;
+    }
+
+    .pre-title{
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+
+    .plan-price{
+        font-size: 3rem;
+        font-weight: 900;
+    }
+
+    .btn{
+        font-size: .8rem;
+        border-radius: 0;
+    }
+    
+    .list-group{
+        padding-left: 60px;
+    }
+    
+}
+
+
